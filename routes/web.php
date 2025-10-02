@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ShowCarController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,8 +19,9 @@ Route::get('/car', [ShowCarController::class]);
 
 // Route::get('/car', [CarController::class, 'index']);
 
-Route::get('/car', [ShowCarController::class]);
+Route::apiResource('products', ProductController::class);
 
-Route::fallback(function () {
-    return "Nah! Just an Error";
-});
+
+
+
+Route::get('/car', [ShowCarController::class]);
