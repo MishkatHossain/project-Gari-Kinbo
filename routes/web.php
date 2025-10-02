@@ -1,27 +1,12 @@
 <?php
 
-use App\Http\Controllers\CarController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ShowCarController;
+use App\Http\Controllers\CalculatorController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::controller(CarController::class)->group(function(){
-//     Route::get('/car', 'index');
-//     Route::get('/my-cars', 'myCars');
-// });
 
 
-Route::get('/car', [ShowCarController::class]);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/car', [CarController::class, 'index']);
-
-Route::apiResource('products', ProductController::class);
-
-
-
-
-Route::get('/car', [ShowCarController::class]);
