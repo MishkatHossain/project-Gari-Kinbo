@@ -9,10 +9,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-
-        
-
-        return View::first(["index", 'home.index']);
+        return view ('home.index')
+        ->with('name', 'Jack Ma')
+        ->with('Mame', 'Ye long Ma')
+        ->with('job', '<b>Developer</b>')
+        ;
     }
 
 
