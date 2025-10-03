@@ -13,6 +13,7 @@ class HomeController extends Controller
         ->with('name', 'Jack Ma')
         ->with('Mame', 'Ye long Ma')
         ->with('job', '<b>Developer</b>')
+        ->with('hobbies', ['Tennis', 'Fishing'])
         ;
     }
 
