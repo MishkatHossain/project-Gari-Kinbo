@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
+@section('title', 'Home Page')
 
-    <script>
-        const Hobbies = {{ \Illuminate\Support\Js::from($hobbies) }};
-    </script>
+@section('content')
+
+<h1>Home page content goes here </h1>
+
+@endsection
 
 
 
-    @verbatim
-        Name: {{name}}
-        Age: {{age}}
-        Job: {{job}}
-        Hobbies: {{hobbies}}
-    @endverbatim
 
 
 
-</body>
 
-</html>
+
+
